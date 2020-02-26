@@ -41,7 +41,7 @@ function create_post_eventos() {
 
 <!-- Agregar en el Loop -->
 
-<?php query_posts(array('post_type'=>'eventos','order' => 'DESC', 'posts_per_page' => "20", 'offset' => "1" ));?>
+<?php query_posts(array('post_type'=>'eventos','order' => 'DESC', 'posts_per_page' => "20", 'offset' => "1", 'post__not_in' => array($post->ID) ));?>
 <?php while ( have_posts() ) : the_post();?>
 						
 	<?php the_title(); ?>
