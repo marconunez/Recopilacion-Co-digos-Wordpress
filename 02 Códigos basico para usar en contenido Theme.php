@@ -29,3 +29,6 @@
 
 <!-- Código para insertar Shortcode -->
 <?php echo do_shortcode ('[promoslider]'); ?>
+
+<!-- Código para obtener ID del Post -->
+<?php $post_id = get_the_ID();echo $post_id; ?>
