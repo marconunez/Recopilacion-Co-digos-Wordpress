@@ -58,6 +58,28 @@ echo $term->name;
 </ul>
 
 
+// Listado con Link
+<ul class="filtros-sidebar mb-50">
+	<?php
+	$terms = get_terms(
+	array(
+		'taxonomy'   => 'filtros',
+		'hide_empty' => false,
+	));
+	// Check if any term exists
+	if ( ! empty( $terms ) && is_array( $terms ) ) {		
+	// Run a loop and print them all
+	foreach ( $terms as $term ) { ?>
+
+	<li class="font-size-13">
+		<a href="<?php echo esc_url( get_term_link( $term ) ) ?>">
+			<i class="fas fa-tags"></i> <?php echo $term->name; ?>
+		</a>
+	</li>	
+	<?php } } ?>
+</ul>
+
+
 <!-- Otra opcion de mostrar taxonomias -->
 <?php echo get_the_term_list($post->ID, 'work_type', '', ', ', ''); ?>
 
