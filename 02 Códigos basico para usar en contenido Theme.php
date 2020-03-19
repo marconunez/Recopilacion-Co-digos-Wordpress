@@ -39,9 +39,17 @@ if( $value ) { ?>
 <strong>Título:</strong> <?php echo $value; ?> <br>
 <?php } else {echo '';}?>
 
+<!-- Condicional Page ID https://www.isitwp.com/ultimate-guide-wordpress-conditional-tags/  / https://www.proyectoalfa.es/blog/diferencia-is-page-single-singular-wordpress/ -->
 <?php
 if ( is_page(34) ) { ?>
 // Info
 <?php } else { ?>
 // Info
 <?php } ?>
+
+<!-- Condicional Tags -->
+<?php if ( is_page_template( 'page-dermoland.php') || (get_post_type() === 'dermoland') )  { ?>
+// Contenido									
+<?php } else { ?>
+// Contenido									
+<?php  }?>
