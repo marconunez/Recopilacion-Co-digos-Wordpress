@@ -32,3 +32,16 @@
 
 <!-- Código para obtener ID del Post -->
 <?php $post_id = get_the_ID();echo $post_id; ?>
+
+<!-- Código para ACF si un valor no existe no aparece -->
+<?php $value = get_field( "titulo" );
+if( $value ) { ?>
+<strong>Título:</strong> <?php echo $value; ?> <br>
+<?php } else {echo '';}?>
+
+<?php
+if ( is_page(34) ) { ?>
+// Info
+<?php } else { ?>
+// Info
+<?php } ?>
