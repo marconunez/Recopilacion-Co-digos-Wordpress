@@ -38,3 +38,11 @@ query_posts("post_type=post&paged=$paged$order=asc"); ?>
  	
 <?php endwhile; // end of the loop. ?>
 <?php wp_reset_query(); // Reset Query?>
+
+
+<!-- Agregar contenido PAGE ID  -->
+<?php  query_posts("page_id=222");
+while ( have_posts() ) : the_post() ?>
+  <?php the_title() ?>
+  <?php //the_content() ?>
+<?php endwhile; wp_reset_query(); ?>
