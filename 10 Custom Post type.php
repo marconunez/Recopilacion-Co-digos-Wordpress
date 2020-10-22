@@ -48,3 +48,13 @@ function create_post_eventos() {
                         
 <?php endwhile; // end of the loop. ?>
 <?php wp_reset_query(); // Reset Query?>
+
+
+
+<?php query_posts(array('post_type'=>'section','order' => 'DESC', 'posts_per_page' => "20", 'page_id=11' ));?>
+<?php while ( have_posts() ) : the_post();?>
+						
+	<?php the_title(); ?>
+                        
+<?php endwhile; // end of the loop. ?>
+<?php wp_reset_query(); // Reset Query?>
