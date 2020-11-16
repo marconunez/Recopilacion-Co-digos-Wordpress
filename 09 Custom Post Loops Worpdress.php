@@ -22,7 +22,6 @@
 	Acá va el contenido
     
 <?php endwhile; // end of the loop. ?>
-	<?php wp_pagenavi(); ?>
 <?php wp_reset_query(); // Reset Query?>
 
 
@@ -38,6 +37,7 @@ query_posts("post_type=post&paged=$paged$order=asc"); ?>
  	Acá va el contenido
  	
 <?php endwhile; // end of the loop. ?>
+	<?php wp_pagenavi(); ?>
 <?php wp_reset_query(); // Reset Query?>
 
 
