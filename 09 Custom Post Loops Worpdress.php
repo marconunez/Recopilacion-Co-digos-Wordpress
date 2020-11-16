@@ -22,6 +22,7 @@
 	Acá va el contenido
     
 <?php endwhile; // end of the loop. ?>
+	<?php wp_pagenavi(); ?>
 <?php wp_reset_query(); // Reset Query?>
 
 
