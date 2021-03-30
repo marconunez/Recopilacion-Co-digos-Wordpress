@@ -1,0 +1,35 @@
+Alternativa 1: Snippet en «functions.php
+El siguiente snippet te permitirá excluir páginas específicas para que nos se muestren en los resultados de búsqueda, asegúrate de copiar y pegar el código en el archivo «functions.php» del tema activo en tu sitio web:
+
+<?php
+//* NO incluyas la etiqueta de apertura
+ 
+//* Excluye páginas específicas de los resultados de búsqueda en WordPress
+function filtro_paginas_especificas( $query ) {
+  if ( $query->is_search && $query->is_main_query() ) {
+    $query->set( 'post__not_in', array( 5,6,7,8 ) ); 
+  }
+}
+add_filter( 'pre_get_posts', 'filtro_paginas_especificas' );
+?>
+
+-------
+
+Ocultar todas las páginas de los resultados de búsqueda:
+Si deseas mostrar únicamente entradas o posts en los resultados de búsqueda de WordPress, entonces puedes utilizar el siguiente código en el archivo «functions.php» de tu tema:
+
+<?php
+//* NO incluyas la etiqueta de apertura
+ 
+//* Muestra exclusivamente entradas (posts) en los resultados de búsqueda 
+function filtro_mostrar_entradas($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','filtro_mostrar_entradas');
+?>
+
+////
+https://mvkoen.com/excluir-paginas-especificas-de-los-resultados-de-busqueda-en-wordpress/
