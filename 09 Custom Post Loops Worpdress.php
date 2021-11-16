@@ -47,3 +47,7 @@ while ( have_posts() ) : the_post() ?>
   <?php the_title() ?>
   <?php //the_content() ?>
 <?php endwhile; wp_reset_query(); ?>
+
+
+Problema paginador
+https://www.danielcastanera.com/solucion-paginador-pagina-estatica-la-home-wordpress/
