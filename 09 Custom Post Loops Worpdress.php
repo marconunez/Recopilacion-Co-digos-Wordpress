@@ -51,3 +51,14 @@ while ( have_posts() ) : the_post() ?>
 
 Problema paginador
 https://www.danielcastanera.com/solucion-paginador-pagina-estatica-la-home-wordpress/
+
+
+<?php if( get_query_var( 'paged' ) ) $my_page = get_query_var( 'paged' ); else { if( get_query_var( 'page' ) )
+$my_page = get_query_var( 'page' ); else $my_page = 1; set_query_var( 'paged', $my_page ); $paged = $my_page;}
+$args = array('posts_per_page' => 12, 'paged' => $paged);  query_posts("post_type=busesusados&paged=$paged$order=asc"); ?>
+
+	<?php the_title() ?>
+
+<?php endwhile; // end of the loop. ?>
+<?php wp_pagenavi(); ?>
+<?php wp_reset_query(); // Reset Query?>
