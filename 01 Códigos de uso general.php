@@ -13,7 +13,8 @@
 <?php bloginfo('stylesheet_url'); ?>
 
 <!-- Código para llamar a la ruta de Sitio -->
-<?php bloginfo( 'home'); ?>
+<?php echo home_url(); ?>
+<?php bloginfo( 'home'); ?> Obstoleto
 
 <!-- Código muestra nombre del Sitio -->
 <?php bloginfo( 'name'); ?>
