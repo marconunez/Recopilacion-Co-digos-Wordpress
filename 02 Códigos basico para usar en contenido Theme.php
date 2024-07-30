@@ -25,7 +25,8 @@
 <?php the_tags( __('Tags: ', 'blank'), ", ", " <br />" ) ?>
 
 <!-- Para uso de Plugins ACF -->
-<?php the_field('nombre-field'); ?>
+<?php the_field('nombre-field'); ?> obsoleto
+<?php echo esc_html( get_field('nombre-field') ); ?>
 
 <!-- Código para insertar Shortcode -->
 <?php echo do_shortcode ('[promoslider]'); ?>
