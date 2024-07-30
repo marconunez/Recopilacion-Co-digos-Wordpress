@@ -29,3 +29,8 @@
     <?php $thumb_id = get_post_thumbnail_id(); $thumb_url = wp_get_attachment_image_src($thumb_id,'large', true); ?>
     <meta property="twitter:image" content="<?php echo $thumb_url[0]; ?> ">
     <?php } ?>
+
+
+Link: https://dondetuwebtelleve.com/open-graph-wordpress/#twitter-cards-validator-depurador-facebook-y-otros-depuradores
+Depurador FB: https://developers.facebook.com/tools/debug/
+Depurador TW: https://cards-dev.twitter.com/validator
