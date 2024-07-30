@@ -6,7 +6,7 @@
     <meta name="googlebot" content="<?php the_field('etiquetas_del_sitio', 'option'); ?>" />
     <meta name="verify" content="<?php the_field('descripcion_sitio_web', 'option'); ?>" />
 
-    <meta property="og:url" content="<?php echo home_url(); ?>">
+    <meta property="og:url" content="<?php the_permalink() ?>">
     <meta property="og:title" content="<?php bloginfo( 'name'); ?>" />
     <meta property="og:site_name" content="<?php bloginfo( 'name'); ?>">
     <meta property="og:type" content="website">
